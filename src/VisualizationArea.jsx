@@ -5,7 +5,6 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
     return (
         <div className="w-full flex flex-col gap-10 items-center">
 
-            {/* ================= LINKED LIST ================= */}
             <div className="w-full max-w-full bg-slate-800 p-6 rounded-2xl shadow-xl overflow-x-auto">
                 <h2 className="mb-6 text-lg font-semibold text-emerald-400">
                 Linked List
@@ -15,11 +14,10 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
                     {linkedList.map((node, index) => (
                         <div key={node.id} className="flex items-center">
                         
-                            {/* NODE CARD */}
                             <div
                                 className="
                                 h-36
-                                w-28
+                                min-w-28
                                 p-4
                                 rounded-xl
                                 bg-slate-900
@@ -30,6 +28,7 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
                                 items-center
                                 justify-between
                                 shadow-md
+                                overflow-auto
                                 "
                             >
                                 <div className="flex flex-col items-center">
@@ -56,7 +55,6 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
                                 </button>
                             </div>
 
-                            {/* ARROW */}
                             {index < linkedList.length - 1 && (
                                 <div className="px-3 flex items-center">
                                     <ArrowRight
@@ -71,7 +69,6 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
                 </div>
             </div>
 
-            {/* ================= STACK ================= */}
             <div className="w-full max-w-md bg-slate-800 p-6 rounded-2xl shadow-xl">
                 <h2 className="mb-6 text-lg font-semibold text-emerald-400">
                 Stack
@@ -87,7 +84,7 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
                         stack.map((node, index) => (
                         <div key={index} className="flex flex-col items-center">
 
-                            <div className="bg-emerald-500 text-slate-900 p-3 rounded-xl w-36 shadow font-semibold">
+                            <div className="bg-emerald-500 text-slate-900 p-3 rounded-xl min-w-36 shadow font-semibold">
                                 <div className="flex justify-between text-xs mb-2">
                                     <p>Index: {index}</p>
                                     {index === 0 && <p>Top</p>}
@@ -109,7 +106,6 @@ const VisualizationArea = ({ linkedList, setLinkedList, position, stack, setStac
                         ))
                     )}
 
-                    {/* SAME POP LOGIC */}
                     <div className="flex justify-center">
                         <button
                         className="

@@ -4,12 +4,10 @@ const InputFields = ({position, setPosition, inputVal, setInputVal, linkedList, 
     <div className='
        w-full max-w-md bg-slate-800 rounded-2xl p-6 shadow-xl flex flex-col gap-5
     '>
-        {/* Input fields and control buttons will go here */}
         <h1 className='
             text-xl font-semibold text-emerald-400 text-center
         '>Add Node to Linked List</h1>
 
-        {/* Input Section */}
         <div className='flex flex-col gap-4'>
             <input 
                 type="text"

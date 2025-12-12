@@ -101,7 +101,7 @@ function App() {
 
       <VisualizationArea linkedList={linkedList} setLinkedList={setLinkedList} position={position} stack={stack} setStack={setStack} deleteNode={deleteNode}/>
 
-      {/* Input and Control Section */}
+      {/* Input Section */}
 
       <InputFields position={position} setPosition={setPosition} inputVal={inputVal} setInputVal={setInputVal} linkedList={linkedList} error={error} setError={setError} addNode={addNode} customPosition={customPosition} setCustomPosition={setCustomPosition}/>
     </div>
